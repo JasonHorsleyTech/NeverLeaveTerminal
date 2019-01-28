@@ -1,0 +1,17 @@
+# ----------------------------------------------------
+# Title
+# Explanation
+# Explanation
+# Written by: Jason Horsley
+# License MIT
+# ----------------------------------------------------
+
+
+# ----------------------------------------------------
+# Title
+# Explanation
+# Explanation
+# Base: DudeIStoleCodeFrom
+# Modifications: Jason Horsley
+# License MIT
+# ----------------------------------------------------
