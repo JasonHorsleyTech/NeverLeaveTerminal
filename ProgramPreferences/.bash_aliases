@@ -58,6 +58,18 @@ cdh()
     echo -e "${COL_Green}cdss: ${COL_Blue}cd to ShellScripts (all loaded from bashrc${COL_NC}"
 }
 
+grep_findText() {
+    grep -r --include=*.* "$1" .
+}
+
+grep_help() {
+    echo -e "${COL_Green}grep_findText: ${COL_Blue}Search ALL files in cwd for (arg1) text${COL_NC}"
+    echo -e "${COL_Grey}   -- grep -r --include=*.* "$1" .${COL_NC}"
+}
+
 # Start a sass watch in the background
-alias startSass='nohup sass --watch scss:css > ~/logs/sassWatch.log 2>&1'
+alias startSass='nohup sass --watch scss:css > ~/logs/sassWatch.log 2>&1 &'
 alias startScss=startSass
+
+# Can't remember the proper commands
+alias reddit=rtv
