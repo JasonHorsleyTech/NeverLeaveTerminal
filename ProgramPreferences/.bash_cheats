@@ -1,0 +1,55 @@
+#!/bin/sh
+
+ls_help()
+{
+    echo -e "${COL_Green}ls: ${COL_Blue}Better vanilla list${COL_NC}"
+    echo -e "${COL_Green}la: ${COL_Blue}List all - even hidden dot files${COL_NC}"
+    echo -e "${COL_Green}ll: ${COL_Blue}Long list - Permissions, owners, and modified stamps${COL_NC}"
+    echo -e "${COL_Green}l: ${COL_Blue}List (short) - Inline names only${COL_NC}"
+    echo -e "${COL_Green}sl: ${COL_Blue}Size list - Some other stuff, but also sizes${COL_NC}"
+}
+
+cd_help() 
+{
+    echo -e "${COL_Green}nv: ${COL_Blue}cd, then ls (why wouldn't you want that every time?)${COL_NC}"
+    echo -e "${COL_Green}cdw: ${COL_Blue}cd to web root${COL_NC}"
+    echo -e "${COL_Green}cdpe: ${COL_Blue}cd to pubbly_engine${COL_NC}"
+    echo -e "${COL_Green}cdpc: ${COL_Blue}cd to pubbly_console${COL_NC}"
+    echo -e "${COL_Green}cdpm: ${COL_Blue}cd to pubbly_markt${COL_NC}"
+    echo -e "${COL_Green}cdss: ${COL_Blue}cd to ShellScripts (all loaded from bashrc${COL_NC}"
+}
+
+grep_help()
+{
+    echo -e "${COL_Green}grep_findText: ${COL_Blue}Search ALL files in cwd for (arg1) text${COL_NC}"
+    echo -e "${COL_Grey}   -- grep -r --include=*.* "$1" .${COL_NC}"
+}
+
+regex_help()
+{
+    echo -e "${COL_Red} -- Match the string -- ${COL_NC}"
+    echo -e "${COL_Green}the: ${COL_Blue}Has 'the' in it somewhere${COL_NC}"
+    echo -e "${COL_Green}^Match: ${COL_Blue}Starts with 'Match'.${COL_NC}"
+    echo -e "${COL_Green}string$: ${COL_Blue}Ends with 'string'.${COL_NC}"
+    echo -e "${COL_Green}^Match the string$: ${COL_Blue}Is eactly 'Match the string'.${COL_NC}"
+
+    echo -e "${COL_Red} -- "
+    echo -e "    Jason: 30"
+    echo -e "    Jerry: 20"
+    echo -e "    Susy: 22"
+    echo -e "    Frank: 12"
+    echo -e "    Billy: 222"
+    echo -e " -- ${COL_NC}"
+    echo -e "${COL_Green}2?: ${COL_Blue}MAY  have one or more '2's in it.${COL_NC}"
+    echo -e "${COL_Green}2+: ${COL_Blue}MUST have one or more '2's in it.${COL_NC}"
+    echo -e "${COL_Green}2{1}: ${COL_Blue}MUST have EXACTLY ONE '2' in it.${COL_NC}"
+    echo -e "${COL_Green}2{1,}: ${COL_Blue}MUST have ONE OR MORE '2's in it.${COL_NC}"
+    echo -e "${COL_Green}2{,2}: ${COL_Blue}MUST have NO MORE THAN TWO '2's in it.${COL_NC}"
+    echo -e "${COL_Green}2{2,3}: ${COL_Blue}MUST have BETWEEN 2 AND 3 '2's in it.${COL_NC}"
+    echo -e "${COL_Green}: ${COL_Blue}.${COL_NC}"
+}
+
+# command_help()
+# {
+#   echo -e "${COL_Green}: ${COL_Blue}.${COL_NC}"
+# }

@@ -29,13 +29,6 @@ alias ll='ls -alF'
 alias l="ls -1 | tr '\n' '\0' | xargs -0 -n 1 basename"
 # Size list
 alias sl='ls -lt | cut -d" " -f6-'
-lsh() {
-    echo -e "${COL_Green}ls: ${COL_Blue}Better vanilla list${COL_NC}"
-    echo -e "${COL_Green}la: ${COL_Blue}List all - even hidden dot files${COL_NC}"
-    echo -e "${COL_Green}ll: ${COL_Blue}Long list - Permissions, owners, and modified stamps${COL_NC}"
-    echo -e "${COL_Green}l: ${COL_Blue}List (short) - Inline names only${COL_NC}"
-    echo -e "${COL_Green}sl: ${COL_Blue}Size list - Some other stuff, but also sizes${COL_NC}"
-}
 
 #can never remember this one
 alias reloadBash='. ~/.bashrc'
@@ -48,23 +41,9 @@ alias cdpc='cd /var/www/html/pubbly_console/'
 alias cdpm='cd /var/www/html/pubbly_market/'
 alias cdss='cd ~/Projects/NeverLeaveTerminal/ShellScripts/'
 
-cdh() 
-{
-    echo -e "${COL_Green}nv: ${COL_Blue}cd, then ls (why wouldn't you want that every time?)${COL_NC}"
-    echo -e "${COL_Green}cdw: ${COL_Blue}cd to web root${COL_NC}"
-    echo -e "${COL_Green}cdpe: ${COL_Blue}cd to pubbly_engine${COL_NC}"
-    echo -e "${COL_Green}cdpc: ${COL_Blue}cd to pubbly_console${COL_NC}"
-    echo -e "${COL_Green}cdpm: ${COL_Blue}cd to pubbly_markt${COL_NC}"
-    echo -e "${COL_Green}cdss: ${COL_Blue}cd to ShellScripts (all loaded from bashrc${COL_NC}"
-}
 
-grep_findText() {
+grepFindText() {
     grep -r --include=*.* "$1" .
-}
-
-grep_help() {
-    echo -e "${COL_Green}grep_findText: ${COL_Blue}Search ALL files in cwd for (arg1) text${COL_NC}"
-    echo -e "${COL_Grey}   -- grep -r --include=*.* "$1" .${COL_NC}"
 }
 
 # Start a sass watch in the background
