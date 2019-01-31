@@ -16,6 +16,8 @@ augroup END
 nore n nzz
 nore } }zz
 nore { {zz
+nore j jzz
+nore k kzz
 nore <Leader>q" ciw""<Esc>P
 nore <Leader>q' ciw''<Esc>P
 nore <expr> <f2> &foldlevel ? 'zM' : 'zR'
