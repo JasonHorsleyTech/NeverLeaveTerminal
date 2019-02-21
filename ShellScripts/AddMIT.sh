@@ -1,29 +1,17 @@
 # ----------------------------------------------------
 # AddMIT
 # A shell script to generate the MIT license in cwd
-# Base: Tom Stewart
-# Modifications: Jason Horsley
+# Author: Jason Horsley
 # License MIT
 # ----------------------------------------------------
 
 # Verify the type of input and number of values
 USAGE="USAGE: $0 copyright_year copyright_holders"
 if [ $# -eq 0 ] ; then
-    echo ""
-    echo $USAGE
-    echo ""
     # Jason Added... save a second
-    read -p "Do you want to use 2018 and Jason_Horsley_Tech? (y/n): " useDefaults
-    if [ "$useDefaults" = "y" ] ; then
-        echo ""
-    else
-        echo "$useDefaults"
-        echo "Exiting"
-        exit 1
-    fi
-fi
-
-if [ $# -eq 1 ] ; then
+    COPYRIGHT_YEAR="2019"
+    COPYRIGHT_HOLDERS="JasonHorsleyTech"
+elif [ $# -eq 1 ] ; then
     exec >&2; echo ""; echo $USAGE
 
     if ! [[ "$1" =~ ^[0-9]+$ ]] ; then
@@ -33,15 +21,17 @@ if [ $# -eq 1 ] ; then
     fi
 
     echo ""; exit 1
+else
+    # Set vars
+    COPYRIGHT_YEAR=$1				# 1st command line argument
+    COPYRIGHT_HOLDERS=$2
 fi
 
-# Set vars
-COPYRIGHT_YEAR=$1				# 1st command line argument
-COPYRIGHT_HOLDERS=$2
+read -p "Do you want to use $COPYRIGHT_YEAR and $COPYRIGHT_HOLDERS? (y/n): " conf
+if [ "$conf" = "y" ]; then
+    # Source: http://opensource.org/licenses/MIT
 
-# Source: http://opensource.org/licenses/MIT
-
-cat > LICENSE << EOF
+    cat > LICENSE << EOF
 The MIT License (MIT)
 
 Copyright (c) $COPYRIGHT_YEAR $COPYRIGHT_HOLDERS
@@ -51,10 +41,9 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
----
-
-But as a request, keep my name in it somewhere.
 EOF
-
 echo "Done. In Torvalds we trust"
+else
+    echo "Exited... Proper usage: $USAGE"
+fi
+
