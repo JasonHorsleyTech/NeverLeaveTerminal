@@ -35,6 +35,7 @@ alias reloadBash='. ~/.bashrc'
 
 # cd to a common location
 nv() { cd "$1" && l; }
+alias cdp='cd ~/Projects/'
 alias cdw='cd /var/www/html/'
 alias cdpe='cd /var/www/html/pubbly_engine/'
 alias cdpc='cd /var/www/html/pubbly_console/'

@@ -12,12 +12,17 @@ augroup numbertoggle
 	autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
+" Prefs
+set ttimeoutlen=1
+
+" Maps
+let mapleader = ","
 " REmaps
 nore n nzz
 nore } }zz
 nore { {zz
-nore j jzz
-nore k kzz
+"nore j jzz
+"nore k kzz
 nore <Leader>q" ciw""<Esc>P
 nore <Leader>q' ciw''<Esc>P
 nore <expr> <f2> &foldlevel ? 'zM' : 'zR'

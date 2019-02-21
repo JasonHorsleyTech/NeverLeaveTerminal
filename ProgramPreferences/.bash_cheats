@@ -13,6 +13,7 @@ ls_cheat()
 cd_cheat() 
 {
     echo -e "${COL_Green}nv: ${COL_Blue}cd, then ls (why wouldn't you want that every time?)${COL_NC}"
+    echo -e "${COL_Green}cdp: ${COL_Blue}cd to home project root${COL_NC}"
     echo -e "${COL_Green}cdw: ${COL_Blue}cd to web root${COL_NC}"
     echo -e "${COL_Green}cdpe: ${COL_Blue}cd to pubbly_engine${COL_NC}"
     echo -e "${COL_Green}cdpc: ${COL_Blue}cd to pubbly_console${COL_NC}"
