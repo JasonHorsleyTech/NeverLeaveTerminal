@@ -1,5 +1,5 @@
 # ----------------------------------------------------
-# BuildMarkdown
+# GenerateMarkdown
 # Shell script that automatically converts markdown
 # found in the /md directory to html in execution root
 # Written by: Jason Horsley
