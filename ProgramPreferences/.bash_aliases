@@ -51,5 +51,8 @@ grepFindText() {
 alias startSass='nohup sass --watch scss:css > ~/logs/sassWatch.log 2>&1 &'
 alias startScss=startSass
 
+# Start up pubbly in the wine location
+alias pubbly='wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Pubbly/Pubbly.exe'
+
 # Can't remember the proper commands
 alias reddit=rtv

@@ -15,9 +15,14 @@ augroup END
 " Prefs
 set ttimeoutlen=1
 
+
 " Maps
 let mapleader = ","
 " REmaps
+" Slow pinky
+nore :W :w
+nore :Q :q
+nore :WQ :wq
 nore n nzz
 nore } }zz
 nore { {zz
@@ -77,4 +82,5 @@ Plug 'vim-vdebug/vdebug'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'KabbAmine/zeavim.vim'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
