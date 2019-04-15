@@ -34,7 +34,14 @@ alias sl='ls -lt | cut -d" " -f6-'
 alias reloadBash='. ~/.bashrc'
 
 # cd to a common location
-nv() { cd "$1" && l; }
+# nv() { cd "$1" && l; }
+function cd() {
+    new_directory="$*";
+    if [ $# -eq 0 ]; then
+        new_directory=${HOME};
+    fi;
+    builtin cd "${new_directory}" && ls | xargs
+}
 alias cdp='cd ~/Projects/'
 alias cdw='cd /var/www/html/'
 alias cdpe='cd /var/www/html/pubbly_engine/'
@@ -56,3 +63,8 @@ alias pubbly='wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Pubbly/Pubbly.exe'
 
 # Can't remember the proper commands
 alias reddit=rtv
+
+
+# Better than windows tree
+alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+
